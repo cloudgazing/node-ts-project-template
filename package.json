@@ -1,0 +1,33 @@
+{
+	"author": "",
+	"dependencies": {},
+	"devDependencies": {
+		"@types/node": "^20.11.16",
+		"@typescript-eslint/eslint-plugin": "^6.20.0",
+		"@typescript-eslint/parser": "^6.20.0",
+		"eslint": "^8.56.0",
+		"eslint-config-prettier": "^9.1.0",
+		"eslint-import-resolver-typescript": "^3.6.1",
+		"eslint-plugin-import": "^2.29.1",
+		"eslint-plugin-prettier": "^5.1.3",
+		"lint-staged": "^15.2.1",
+		"prettier": "3.2.4",
+		"tsc-watch": "^6.0.4",
+		"typescript": "^5.3.3"
+	},
+	"engines": {
+		"node": ">=20.11.0"
+	},
+	"exports": "./dist/index.js",
+	"main": "./dist/index.js",
+	"scripts": {
+		"compile": "tsc",
+		"compile:server": "tsc-watch --onSuccess \"node .\"",
+		"compile:watch": "tsc --watch",
+		"lint": "eslint . --max-warnings 0 --report-unused-disable-directives",
+		"lint:fix": "npm run lint -- --fix",
+		"start": "node ."
+	},
+	"type": "module",
+	"version": "1.0.0"
+}
