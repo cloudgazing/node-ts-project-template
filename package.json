@@ -1,33 +1,24 @@
 {
-	"author": "",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+	"scripts": {
+    "build": "tsc && bun build ./src/index.ts --outdir ./dist",
+		"watch": "bun run --watch ./src/index.ts",
+    "lint": "eslint . --ext ts --report-unused-disable-directives --max-warnings 0",
+		"start": "bun ./src/index.ts"
+  },
 	"dependencies": {},
 	"devDependencies": {
-		"@types/node": "20.11.17",
-		"@typescript-eslint/eslint-plugin": "7.0.1",
-		"@typescript-eslint/parser": "7.0.1",
-		"eslint": "8.56.0",
-		"eslint-config-prettier": "9.1.0",
-		"eslint-import-resolver-typescript": "3.6.1",
-		"eslint-plugin-import": "2.29.1",
-		"eslint-plugin-prettier": "5.1.3",
-		"lint-staged": "15.2.2",
-		"prettier": "3.2.5",
-		"tsc-watch": "6.0.4",
-		"typescript": "5.3.3"
-	},
-	"engines": {
-		"node": ">=20.11.0"
-	},
-	"exports": "./dist/index.js",
-	"main": "./dist/index.js",
-	"scripts": {
-		"compile": "tsc",
-		"compile:server": "tsc-watch --onSuccess \"node .\"",
-		"compile:watch": "tsc --watch",
-		"lint": "eslint . --max-warnings 0 --report-unused-disable-directives",
-		"lint:fix": "npm run lint -- --fix",
-		"start": "node ."
-	},
-	"type": "module",
-	"version": "1.0.0"
+    "@types/node": "20.12.11",
+    "@typescript-eslint/eslint-plugin": "7.8.0",
+    "@typescript-eslint/parser": "7.8.0",
+    "eslint": "8.57.0",
+    "eslint-config-prettier": "9.1.0",
+    "eslint-import-resolver-typescript": "3.6.1",
+    "eslint-plugin-import": "2.29.1",
+    "eslint-plugin-prettier": "5.1.3",
+    "prettier": "3.2.5",
+    "typescript": "5.4.5"
+  }
 }
